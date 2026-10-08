@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T00:00:00+05:30",
+  "title": "Design System: Dr. Maya Reynolds Therapy",
+  "extensions": {
+    "colorMeta": {
+      "pacific-ink": { "role": "primary", "displayName": "Pacific Ink", "tonalRamp": ["#071522", "#102a43", "#244866", "#426782", "#66859d", "#8fa8b9", "#becdd7", "#eef3f6"] },
+      "warm-paper": { "role": "neutral", "displayName": "Warm Paper", "tonalRamp": ["#292723", "#4d4942", "#716c63", "#969087", "#bab4ab", "#d9d4cc", "#ebe7e0", "#fcf9f3"] },
+      "sun-washed-plaster": { "role": "neutral", "displayName": "Sun-washed Plaster", "tonalRamp": ["#27231d", "#4a4237", "#6e6354", "#928574", "#b5a997", "#d2c8b9", "#e3dacd", "#f0e9dd"] },
+      "restrained-iris": { "role": "primary", "displayName": "Restrained Iris", "tonalRamp": ["#0b1827", "#17314e", "#234a73", "#315f91", "#537da7", "#7c9dbd", "#afc2d6", "#e3ebf3"] },
+      "walnut": { "role": "secondary", "displayName": "Walnut", "tonalRamp": ["#1d1611", "#382b21", "#554133", "#705846", "#8d715b", "#ad927d", "#d0bbaa", "#f1e8e0"] },
+      "coastal-mist": { "role": "neutral", "displayName": "Coastal Mist", "tonalRamp": ["#1c2227", "#374149", "#53616b", "#71818c", "#91a1ac", "#afbdc6", "#ccd6df", "#f0f4f7"] },
+      "iris-light": { "role": "tertiary", "displayName": "Iris Light", "tonalRamp": ["#16202d", "#2a3e58", "#405d82", "#5b7ca9", "#799ac7", "#9db5d7", "#c2d1e6", "#edf2f8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero promise and the largest emotionally important statements." },
+      "headline": { "displayName": "Headline", "purpose": "Major section headings on light and dark fields." },
+      "title": { "displayName": "Editorial Title", "purpose": "Service names, FAQ questions, and supporting serif hierarchy." },
+      "body": { "displayName": "Body", "purpose": "Explanatory copy with a reflective, generous reading rhythm." },
+      "label": { "displayName": "Label", "purpose": "Compact modality notes and small uppercase metadata." }
+    },
+    "shadows": [
+      { "name": "ambient-soft", "value": "0 24px 70px rgba(16, 42, 67, 0.14)", "purpose": "Broad ambient lift for placed photography and the open mobile menu." },
+      { "name": "portrait-warm", "value": "0 30px 80px rgba(71, 53, 38, 0.16)", "purpose": "Warm daylight depth beneath the primary portrait." }
+    ],
+    "motion": [
+      { "name": "daylight", "value": "18s cubic-bezier(.16, 1, .3, 1) forwards", "purpose": "One-way diagonal sunlight movement in the homepage hero." },
+      { "name": "state-standard", "value": "300ms ease", "purpose": "Arrow, icon, and color state transitions." },
+      { "name": "service-tone", "value": "350ms ease", "purpose": "Subtle background-tone response on service rows." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Consultation Link",
+      "kind": "button",
+      "refersTo": "consultation-link",
+      "description": "Primary rectangular action used to request a consultation.",
+      "html": "<a class=\"ds-consultation\" href=\"#\">Request a consultation <svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M5 12h13M14 7l5 5-5 5\"/></svg></a>",
+      "css": ".ds-consultation { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:16px; padding:12px 24px; background:#315f91; color:#fff; font:600 14px/1.5 Arial,sans-serif; letter-spacing:.025em; text-decoration:none; transition:background-color .3s ease; } .ds-consultation svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.75; transition:transform .3s ease; } .ds-consultation:hover { background:#102a43; } .ds-consultation:hover svg { transform:translateX(4px); } .ds-consultation:focus-visible { outline:2px solid currentColor; outline-offset:4px; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Quiet inline navigation with an underlined contact action and a hairline baseline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"#\">About</a><a href=\"#\">Therapy</a><a href=\"#\">Approach</a><a class=\"ds-nav-action\" href=\"#\">Get in touch</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:32px; padding:0 0 20px; border-bottom:1px solid rgba(16,42,67,.15); color:#102a43; font:500 14px/1.5 Arial,sans-serif; } .ds-nav a { color:inherit; text-decoration:none; } .ds-nav a:hover { text-decoration:underline; text-underline-offset:4px; } .ds-nav-action { padding-bottom:4px; border-bottom:1px solid #102a43; } .ds-nav a:focus-visible { outline:2px solid currentColor; outline-offset:4px; }"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "description": "Ruled editorial row for a service title, explanation, and modality note.",
+      "html": "<article class=\"ds-service\"><h3>Anxiety &amp; Panic</h3><div><p>Practical support with room to understand what sits beneath the immediate experience.</p><small>CBT · MINDFULNESS · BODY-ORIENTED TOOLS</small></div></article>",
+      "css": ".ds-service { display:grid; grid-template-columns:.65fr 1fr; gap:40px; padding:48px 0; border-bottom:1px solid rgba(252,249,243,.2); background:#102a43; color:#fcf9f3; transition:background-color .35s ease; } .ds-service:hover { background:#173650; } .ds-service h3 { margin:0; font:500 36px/1.2 Georgia,serif; } .ds-service p { max-width:560px; margin:0; color:rgba(252,249,243,.75); font:400 16px/2 Arial,sans-serif; } .ds-service small { display:block; margin-top:20px; color:#b8cae3; font:600 12px/1.5 Arial,sans-serif; letter-spacing:.14em; }"
+    },
+    {
+      "name": "FAQ Trigger",
+      "kind": "button",
+      "refersTo": "faq-trigger",
+      "description": "Full-width ruled question row with a plus that becomes a close mark when expanded.",
+      "html": "<button class=\"ds-faq\" type=\"button\" aria-expanded=\"false\"><span>What is your approach to therapy?</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M12 5v14M5 12h14\"/></svg></button>",
+      "css": ".ds-faq { width:100%; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:24px 0; border:0; border-bottom:1px solid rgba(16,42,67,.2); background:transparent; color:#102a43; text-align:left; font:500 30px/1.2 Georgia,serif; cursor:pointer; } .ds-faq svg { width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; transition:transform .3s ease; } .ds-faq[aria-expanded=\"true\"] svg { transform:rotate(45deg); } .ds-faq:focus-visible { outline:2px solid currentColor; outline-offset:4px; }"
+    },
+    {
+      "name": "Photograph Caption",
+      "kind": "custom",
+      "description": "Paper caption placed directly over the lower edge of an office photograph.",
+      "html": "<figure class=\"ds-photo\"><div class=\"ds-photo-field\"></div><figcaption>Warm, collaborative, and grounded—structured enough to support you, open enough to go deeper.</figcaption></figure>",
+      "css": ".ds-photo { position:relative; min-height:360px; margin:0; overflow:hidden; background:#80644c33; } .ds-photo-field { position:absolute; inset:0; background:linear-gradient(135deg,#ccd6df,#9aa9b3); } .ds-photo figcaption { position:absolute; left:0; bottom:0; max-width:310px; padding:24px; background:#fcf9f3; color:rgba(16,42,67,.75); font:400 14px/1.7 Arial,sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Santa Monica Morning Room",
+    "overview": "The system feels like daylight moving across warm plaster, paper, walnut, and a view toward the Pacific. It is editorial rather than spa-like: high-contrast serif statements, a clear humanist sans, rectangular photographs, fine rules, and purposeful areas of open space create calm through composition instead of decorative softness.\n\nThe reusable identity is quiet, direct, and materially specific. Pacific Ink carries authority, Restrained Iris marks action, and the warm neutrals hold long-form reading. Real portrait and office photography supply the human presence. The homepage expresses this world through an asymmetric first viewport and alternating light and dark editorial fields; those route-specific arrangements should not become a template for every surface.",
+    "keyCharacteristics": [
+      "Sun-washed warm paper and plaster fields with Pacific Ink typography.",
+      "High-contrast Cormorant Garamond statements paired with humanist Manrope copy.",
+      "Asymmetric editorial composition, rectangular image crops, and hairline rules.",
+      "Restrained iris accents and small walnut details rather than a scattered palette.",
+      "Daylight is the only atmospheric motion material."
+    ],
+    "rules": [
+      { "name": "The Morning Room Rule", "body": "Every surface should feel naturally lit, calm, and composed; warmth comes from material color, photography, and space, never generic wellness decoration.", "section": "overview" },
+      { "name": "The One Iris Rule", "body": "Treat iris as a deliberate point of attention, not a color to distribute across every section.", "section": "colors" },
+      { "name": "The Tonal Field Rule", "body": "Separate major regions with full fields of paper, plaster, ink, or mist and with fine rules; do not simulate structure with card collections.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Serif creates recognition and emotional cadence; sans-serif explains and directs. Do not reverse those jobs or introduce a third type personality.", "section": "typography" },
+      { "name": "The Asymmetric Pair Rule", "body": "Pair one dominant element with one supporting element—headline and portrait, image and text, label and content—rather than giving every column equal weight.", "section": "layout" },
+      { "name": "The Open Floor Rule", "body": "Use whitespace and hairline divisions to organize information. Avoid boxed modules unless the box is materially meaningful, such as a paper caption laid over a photograph.", "section": "layout" },
+      { "name": "The Daylight Only Rule", "body": "Atmospheric motion must read as changing daylight; do not add floating objects, parallax layers, pulsing ornaments, or perpetual ambient loops.", "section": "elevation" },
+      { "name": "The Unsoftened Edge Rule", "body": "Preserve square corners and straight crops. Rounded wellness cards, pills, and blob masks contradict the system.", "section": "shapes" },
+      { "name": "The Row, Not Card Rule", "body": "Repeated information belongs in divided editorial rows or open columns, not isolated raised cards.", "section": "components" }
+    ],
+    "dos": [
+      "Do use full tonal fields, asymmetrical columns, and hairline rules to establish hierarchy.",
+      "Do keep copy calm, direct, specific, and easy to scan without reducing it to slogans.",
+      "Do use the supplied portrait and office photography as primary narrative material.",
+      "Do reserve serif scale for emotionally important statements and questions.",
+      "Do preserve visible keyboard focus, semantic controls, descriptive image alternatives, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't introduce generic wellness cards, rounded containers, floating badges, or decorative blobs.",
+      "Don't scatter iris across minor elements or add unrelated accent colors.",
+      "Don't use gradients as a substitute for daylight, photography, or material fields.",
+      "Don't invent testimonials, outcomes, pricing, insurance details, contact information, or credentials.",
+      "Don't turn the homepage's exact hero overlap or section sequence into a universal page template."
+    ]
+  }
+}

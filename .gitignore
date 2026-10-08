@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.vercel/
+.impeccable/edge-profile-*/
+.impeccable/chrome-mobile/
+.impeccable/chrome-final*/
+.impeccable/mocks/
+.impeccable/review/
+npm-debug.log*
+.env*
+!.env.example
